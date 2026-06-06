@@ -1,5 +1,5 @@
 # Render service manifest for the backend
-# Replace placeholders (YOUR_REPO, branch, and region) as needed.
+# This file should be in the delivery root for the Render service.
 services:
   - type: web
     name: face-detector-backend
@@ -13,3 +13,5 @@ services:
     envVars:
       - key: CORS_ORIGINS
         value: "*" # set to your frontend origin in production, e.g. https://my-frontend.vercel.app
+# IMPORTANT: If you set the Start Command manually in Render UI, use $PORT exactly,
+# not $5000 or a literal port number.
