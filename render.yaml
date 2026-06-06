@@ -1,0 +1,14 @@
+# Render service manifest for the backend
+# Replace placeholders (YOUR_REPO, branch, and region) as needed.
+services:
+  - type: web
+    name: face-detector-backend
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: CORS_ORIGINS
+        value: "*" # set to your frontend origin in production, e.g. https://my-frontend.vercel.app

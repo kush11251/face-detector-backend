@@ -1,0 +1,20 @@
+.venv/
+# Python virtualenv
+.venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Editor/temp
+.DS_Store
+*.swp
+
+# Logs
+*.log
+
+# Environment
+.env
+.env
+.idea/
+.vscode/
