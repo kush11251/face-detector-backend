@@ -9,7 +9,7 @@ services:
     branch: main
     pythonVersion: "3.11.8"
     buildCommand: python -m pip install --upgrade pip setuptools wheel && python -m pip install --prefer-binary -r requirements.txt && python -m pip install setuptools
-    startCommand: gunicorn main:app --bind 0.0.0.0:$PORT
+    startCommand: python -m gunicorn main:app --bind 0.0.0.0:$PORT
     envVars:
       - key: CORS_ORIGINS
         value: "*" # set to your frontend origin in production, e.g. https://my-frontend.vercel.app
